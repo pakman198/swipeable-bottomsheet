@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+.toggler {
+  font-size: 1.5rem;
+  background-color: #61dafb;
+  margin-top: 20px;
+}

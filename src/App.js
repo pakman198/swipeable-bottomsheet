@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import BottomSheet from './BottomSheet/BottomSheet';
 
 function App() {
+
+  const [visibility, setVisibility] = useState();
+
+  const toggleVisibility = () => {
+    console.log("Toggle visibility");
+    setVisibility(!visibility);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button className="toggler" onClick={toggleVisibility}>display bottom sheet</button>
+
+      <BottomSheet visibility={visibility} />
     </div>
   );
 }
