@@ -1,14 +1,9 @@
 import './BottomSheet.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classnames from 'classnames';
 import { animated, useSpring } from 'react-spring';
 
 const BottomSheet = ({visibility}) => {
-
-  const cssClasses = classnames('bottom-sheet', {
-    'bottom-sheet__visible': visibility
-  });
 
   const animation = useSpring({
     minHeight: visibility ? '274px' : '0px',
